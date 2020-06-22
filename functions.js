@@ -12,6 +12,7 @@
  ****************************************************************/
 function getChannelName(channel) {
   // Your code here
+  return channel.name;
 }
 
 /**************************************************************
@@ -21,6 +22,9 @@ function getChannelName(channel) {
  ****************************************************************/
 function numberOfVideos(channel) {
   // Your code here
+  let sum = 0;
+  sum = channel.videos.length;
+  return sum;
 }
 
 /**************************************************************
@@ -34,6 +38,7 @@ function numberOfVideos(channel) {
  ****************************************************************/
 function channelHasVideo(videoTitle, channel) {
   // Your code here
+  return channel.videos.some(video => videoTitle === video.title);
 }
 
 /**************************************************************
@@ -46,6 +51,7 @@ function channelHasVideo(videoTitle, channel) {
  ****************************************************************/
 function getChannelByName(channelName, channels) {
   // Your code here
+  return channels.find(nam => channelName === nam.name);
 }
 
 /**************************************************************
@@ -58,6 +64,7 @@ function getChannelByName(channelName, channels) {
  ****************************************************************/
 function getChannelByVideoTitle(videoTitle, channels) {
   // Your code here
+  return channels.find(channel => channel.videos.some(video => videoTitle === video.title) === true);
 }
 
 /**************************************************************
@@ -70,6 +77,8 @@ function getChannelByVideoTitle(videoTitle, channels) {
  ****************************************************************/
 function searchChannels(query, channels) {
   // Your code here
+
+
 }
 
 /**************************************************************
@@ -81,6 +90,8 @@ function searchChannels(query, channels) {
  ****************************************************************/
 function totalVideosDuration(channel) {
   // Your code here
+  let sum = 0;
+  return channel.vidoes.reduce(video.duration + sum);
 }
 
 /**************************************************************
@@ -93,6 +104,7 @@ function totalVideosDuration(channel) {
  ****************************************************************/
 function channelWithMostContent(channels) {
   // Your code here
+
 }
 
 /**************************************************************
